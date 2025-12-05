@@ -1,0 +1,57 @@
+@use '../util' as *;
+
+.toggle {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: rem(12);
+    border: none;
+    label {
+        &[for='dark'] {
+            grid-column: 1/2;
+            justify-self: end;
+        }
+        &[for='system'] {
+            grid-column: 1/4;
+            grid-row: 2/3;
+            justify-self: center;
+        }
+        &[for='light'] {
+            grid-column: 3/4;
+        }
+    }
+    &__wrapper {
+        height: rem(24);
+        grid-column: 2/3;
+        grid-row: 1/2;
+        position: relative;
+    }
+    input[type='radio'] {
+        opacity: 1;
+    }
+    &__background {
+        border-radius: rem(12);
+        background: linear-gradient(225deg, var(--toggle-bg-start) 0%, var(--toggle-bg-end) 98.02%);
+        height: 100%;
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        pointer-events: none;
+        display: none;
+    }
+    &__button {
+        width: rem(18);
+        height: rem(18);
+        border-radius: 50%;
+        background-color: var(--dark-top-bg-color);
+        position: absolute;
+        left: rem(3);
+        top: rem(3);
+        right: 100%;
+        ~ #light:checked {
+            right: 0;
+            left: 100%;
+        }
+    }
+}
