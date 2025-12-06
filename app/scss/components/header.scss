@@ -1,7 +1,7 @@
 @use '../util' as *; 
 .header {
-    background: var(--dark-top-bg-color);
-    margin-top: rem(36);
+    // background: var(--dark-top-bg-color);
+    padding-top: rem(36);
     display: flex;
     flex-wrap: wrap;
     @include breakpoint(medium) {

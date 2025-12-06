@@ -1,11 +1,15 @@
 @use '../util' as *;
 h1 {
+    font-size: rem(24);
     @include breakpoint(large) {
         font-size: rem(28);
-        font-size: rem(24);
     }
     line-height: 1.1;
     margin-bottom: rem(3);
+}
+h2 {
+    font-size: rem(24);
+    margin-bottom: rem(24);
 }
 a {
     text-decoration: none;
