@@ -2,20 +2,20 @@
 .header {
     background: var(--dark-top-bg-color);
     margin-top: rem(36);
+    display: flex;
+    flex-wrap: wrap;
     @include breakpoint(medium) {
-        display: flex;
         justify-content: space-between;
         align-items: center;
     }
     &__title {
-
+        @include breakpoint(medium) {
+            width: auto;
+        }
     }
     &__followers {
         font-size: rem(14);
         font-weight: 700;
         color: var(--dark-color1);
-    }
-    &__toggle {
-
     }
 }

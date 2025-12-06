@@ -2,22 +2,26 @@
 
 .toggle {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr rem(60) 1fr;
     grid-template-rows: repeat(2, 1fr);
-    gap: rem(12);
+    gap: rem(4.8) rem(8);
     border: none;
     label {
+        font-size: rem(14);
         &[for='dark'] {
             grid-column: 1/2;
             justify-self: end;
+            align-self: center;
         }
         &[for='system'] {
             grid-column: 1/4;
             grid-row: 2/3;
             justify-self: center;
+            align-self: start;
         }
         &[for='light'] {
             grid-column: 3/4;
+            align-self: center;
         }
     }
     &__wrapper {
@@ -25,9 +29,18 @@
         grid-column: 2/3;
         grid-row: 1/2;
         position: relative;
-    }
-    input[type='radio'] {
-        opacity: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        input[type='radio'] {
+            opacity: 0;
+            z-index: 1;
+            // height: rem(24);
+            // width: rem(20);
+            // margin: 0 rem(-2) 0 rem(-2);
+            width: calc(100% / 3);
+            height: 100%;
+        }
     }
     &__background {
         border-radius: rem(12);
@@ -38,7 +51,6 @@
         width: 100%;
         top: 0;
         pointer-events: none;
-        display: none;
     }
     &__button {
         width: rem(18);
@@ -49,9 +61,19 @@
         left: rem(3);
         top: rem(3);
         right: 100%;
-        ~ #light:checked {
-            right: 0;
-            left: 100%;
-        }
+        transition: all 150ms ease-in-out;
+    }
+    #dark:checked ~ &__button {
+        left: rem(3);
+        right: auto;
+    }
+    #system:checked ~ &__button {
+        left: 50%;
+        right: auto;
+        transform: translate(-50%); 
+    }
+    #light:checked ~ &__button {
+        left: calc(100% - rem(21)); 
+        right: auto;
     }
 }
