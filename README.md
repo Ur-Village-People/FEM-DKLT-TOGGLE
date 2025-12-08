@@ -84,6 +84,6 @@ If you plan to modify the styles, you will need a compiler (like Node-Sass or si
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
+- Live Site URL: [https://fem-social-dashboard-theme-switcher.netlify.app](https://fem-social-dashboard-theme-switcher.netlify.app)
 - Frontend Mentor - [@Ur-Village-People](https://www.frontendmentor.io/profile/Ur-Village-People)
 - Twitter - [@UrVillag3P3opl3](https://www.twitter.com/UrVillag3P3opl3)
