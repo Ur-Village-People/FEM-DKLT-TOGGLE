@@ -1,79 +1,65 @@
 @use '../util' as *;
-
 .toggle {
     display: grid;
-    grid-template-columns: 1fr rem(60) 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    gap: rem(4.8) rem(8);
+    grid-template-columns: 1fr rem(48);
     border: none;
     label {
         font-size: rem(14);
-        &[for='dark'] {
-            grid-column: 1/2;
-            justify-self: end;
-            align-self: center;
-        }
-        &[for='system'] {
-            grid-column: 1/4;
-            grid-row: 2/3;
-            justify-self: center;
-            align-self: start;
-        }
-        &[for='light'] {
-            grid-column: 3/4;
-            align-self: center;
-        }
+        line-height: rem(24);
+        margin-right: rem(13);
+        color: var(--color1);
+        font-weight: 700;
     }
     &__wrapper {
         height: rem(24);
-        grid-column: 2/3;
-        grid-row: 1/2;
+        width: rem(48);
         position: relative;
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        cursor: pointer;
         input[type='radio'] {
             opacity: 0;
-            z-index: 1;
-            // height: rem(24);
-            // width: rem(20);
-            // margin: 0 rem(-2) 0 rem(-2);
-            width: calc(100% / 3);
+            z-index: 2;
+            width: 50%;
             height: 100%;
+            cursor: pointer;
+            margin: 0;
+            position: relative;
         }
     }
     &__background {
         border-radius: rem(12);
-        background: linear-gradient(225deg, var(--toggle-bg-start) 0%, var(--toggle-bg-end) 98.02%);
+        background: var(--toggle);
         height: 100%;
         display: block;
         position: absolute;
         width: 100%;
         top: 0;
+        left: 0;
         pointer-events: none;
+        transition: background-color 0.3s ease, background-image 0.3s ease; 
     }
     &__button {
         width: rem(18);
         height: rem(18);
         border-radius: 50%;
-        background-color: var(--dark-top-bg-color);
+        background-color: var(--bg-color);
         position: absolute;
-        left: rem(3);
         top: rem(3);
-        right: 100%;
-        transition: all 150ms ease-in-out;
+        pointer-events: none;
+        transition: left 0.2s ease-in-out, background-color 0.3s ease;
+        left: rem(3);
     }
     #dark:checked ~ &__button {
         left: rem(3);
-        right: auto;
-    }
-    #system:checked ~ &__button {
-        left: 50%;
-        right: auto;
-        transform: translate(-50%); 
     }
     #light:checked ~ &__button {
-        left: calc(100% - rem(21)); 
-        right: auto;
+        left: calc(100% - rem(21));
+    }
+    &__wrapper:hover &__background {
+        opacity: 0.9;
+    }
+    &:focus-within &__background {
+        box-shadow: 0 0 0 2px var(--color1);
     }
 }

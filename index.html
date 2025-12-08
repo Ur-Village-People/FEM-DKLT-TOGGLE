@@ -3,8 +3,6 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- displays site properly based on user's device -->
-
 		<link
 			rel="icon"
 			type="image/png"
@@ -20,21 +18,9 @@
 		/>
 		<link rel="stylesheet" href="dist/style.css" />
 		<script defer src="dist/script.js"></script>
-
 		<title>
 			Frontend Mentor | [Social media dashboard with theme switcher]
 		</title>
-
-		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-		<style>
-			.attribution {
-				font-size: 11px;
-				text-align: center;
-			}
-			.attribution a {
-				color: hsl(228, 45%, 44%);
-			}
-		</style>
 	</head>
 	<body>
 		<header class="header container">
@@ -45,23 +31,28 @@
 			<fieldset
 				aria-label="theme toggle"
 				role="radiogroup"
-				class="header__toggle toggle"
+				class="toggle"
 			>
+				<label for="dark">
+					Dark Mode <span class="visually-hidden"> On </span>
+				</label>
 				<div class="toggle__wrapper">
-					<input type="radio" id="dark" name="theme-preference" />
 					<input
 						type="radio"
-						id="system"
+						id="dark"
 						name="theme-preference"
-						checked
+						value="dark"
 					/>
-					<input type="radio" id="light" name="theme-preference" />
+					<input
+						type="radio"
+						id="light"
+						name="theme-preference"
+						value="light"
+					/>
 					<span aria-hidden="true" class="toggle__background"></span>
 					<span aria-hidden="true" class="toggle__button"></span>
 				</div>
-				<label for="dark">Dark</label>
-				<label for="system">System</label>
-				<label for="light">Light</label>
+				<label for="light" class="visually-hidden"> Dark Mode </label>
 			</fieldset>
 		</header>
 		<main>
@@ -84,7 +75,6 @@
 						<div class="card__number">12 Today</div>
 					</div>
 				</div>
-
 				<div class="card card--twitter">
 					<div class="card__platform">
 						<img
@@ -103,7 +93,6 @@
 						<div class="card__number">99 Today</div>
 					</div>
 				</div>
-
 				<div class="card card--instagram">
 					<div class="card__platform">
 						<img
@@ -122,7 +111,6 @@
 						<div class="card__number">1099 Today</div>
 					</div>
 				</div>
-
 				<div class="card card--youtube">
 					<div class="card__platform">
 						<img
@@ -142,7 +130,6 @@
 					</div>
 				</div>
 			</section>
-
 			<section class="container">
 				<h2>Overview - Today</h2>
 				<div class="grid">
@@ -155,7 +142,6 @@
 							<div class="card__number">3%</div>
 						</div>
 					</div>
-
 					<div class="card card--grid">
 						<div class="card__subtitle">Likes</div>
 						<img src="/images/icon-facebook.svg" alt="Facebook" />
@@ -165,7 +151,6 @@
 							<div class="card__number">2%</div>
 						</div>
 					</div>
-
 					<div class="card card--grid">
 						<div class="card__subtitle">Profile Views</div>
 						<img src="/images/icon-instagram.svg" alt="Instagram" />
@@ -175,7 +160,6 @@
 							<div class="card__number">1375%</div>
 						</div>
 					</div>
-
 					<div class="card card--grid">
 						<div class="card__subtitle">Likes</div>
 						<img src="/images/icon-instagram.svg" alt="Instagram" />
@@ -185,7 +169,6 @@
 							<div class="card__number">2257%</div>
 						</div>
 					</div>
-
 					<div class="card card--grid">
 						<div class="card__subtitle">Retweets</div>
 						<img src="/images/icon-twitter.svg" alt="Twitter" />
@@ -195,7 +178,6 @@
 							<div class="card__number">303%</div>
 						</div>
 					</div>
-
 					<div class="card card--grid">
 						<div class="card__subtitle">Likes</div>
 						<img src="/images/icon-twitter.svg" alt="Twitter" />
@@ -205,7 +187,6 @@
 							<div class="card__number">507%</div>
 						</div>
 					</div>
-
 					<div class="card card--grid">
 						<div class="card__subtitle">Total Views</div>
 						<img src="/images/icon-youtube.svg" alt="Youtube" />
@@ -215,7 +196,6 @@
 							<div class="card__number">12%</div>
 						</div>
 					</div>
-
 					<div class="card card--grid">
 						<div class="card__subtitle">Likes</div>
 						<img src="/images/icon-youtube.svg" alt="Youtube" />

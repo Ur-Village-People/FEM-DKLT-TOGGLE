@@ -1,6 +1,5 @@
 @use '../util' as *; 
 .header {
-    // background: var(--dark-top-bg-color);
     padding-top: rem(36);
     display: flex;
     flex-wrap: wrap;
@@ -16,6 +15,6 @@
     &__followers {
         font-size: rem(14);
         font-weight: 700;
-        color: var(--dark-color1);
+        color: var(--color1);
     }
 }
