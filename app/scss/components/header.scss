@@ -7,6 +7,9 @@
         justify-content: space-between;
         align-items: center;
     }
+    @include breakpoint-down(small) {
+        flex-direction: column;
+    }
     &__title {
         @include breakpoint(medium) {
             width: auto;
