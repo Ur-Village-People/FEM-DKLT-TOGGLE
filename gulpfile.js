@@ -6,6 +6,10 @@ const cssnano = require('cssnano');
 const babel = require('gulp-babel');
 const terser = require('gulp-terser');
 const browsersync = require('browser-sync').create();
+function copyTask() {
+    return src(['*.html', 'images/**/*'], {base: '.'}) 
+    .pipe(dest('dist'));
+}
 function scssTask() {
     return src('app/scss/style.scss', {sourcemaps: true})
     .pipe(sass({
@@ -49,5 +53,5 @@ function watchTask() {
         series(scssTask, jsTask, browserSyncReload)
     );
 }
-exports.default = series(scssTask, jsTask, browserSyncServe, watchTask);
-exports.build = series(scssTask, jsTask);
+exports.default = series(scssTask, jsTask, copyTask, browserSyncServe, watchTask);
+exports.build = series(scssTask, jsTask, copyTask);
