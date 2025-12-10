@@ -69,7 +69,7 @@
     border-radius: rem(5);
     position: relative;
     overflow: hidden;
-    transition:0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
    &:hover {
         background: var(--card-hover);
         .card__icon {
@@ -109,7 +109,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: rem(28);
+        margin-block-end: rem(28);
         height: rem(20);
     }
     &__subtitle {
@@ -117,7 +117,7 @@
         font-weight: 700;
     }
     &__icon {
-        margin-right: rem(8);
+        margin-inline-end: rem(8);
         transition: transform 0.2s;
     }
     &__username {
@@ -125,10 +125,10 @@
         font-weight: 700;
     }
     &__followers {
-        margin-bottom: rem(25);
+        margin-block-end: rem(25);
     }
     &__count {
-        margin-bottom: rem(5);
+        margin-block-end: rem(5);
         color: var(--color2);
         font-weight: bold;
         letter-spacing: rem(-2);
@@ -163,7 +163,7 @@
             color: var(--brightred);
         }
         img {
-            margin-right: rem(4);
+            margin-inline-end: rem(4);
         }
     }
 }

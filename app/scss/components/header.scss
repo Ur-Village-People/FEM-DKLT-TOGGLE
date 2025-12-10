@@ -1,6 +1,6 @@
 @use '../util' as *; 
 .header {
-    padding-top: rem(36);
+    padding-block-start: rem(36);
     display: flex;
     flex-wrap: wrap;
     @include breakpoint(medium) {
