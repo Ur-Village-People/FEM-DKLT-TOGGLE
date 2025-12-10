@@ -15,10 +15,12 @@
     // Light theme
     --bg-color: hsl(0, 100%, 100%);
     --top-bg-color: hsl(225, 100%, 98%);
+    --divider: hsl(230, 8%, 57%);
     --card-bg: hsl(227, 47%, 96%);
     --card-hover: hsl(227, 47%, 92%);
-    --color1: hsl(228, 12%, 44%);
+    --color1: hsl(228, 12%, 30%);
     --color2: hsl(230, 17%, 14%);
+    --link-color: hsl(228, 45%, 44%);
 }
 [data-theme='dark'] {
     // Dark toggle
@@ -28,6 +30,7 @@
     // Dark theme
     --bg-color: hsl(230, 17%, 14%);
     --top-bg-color: hsl(232, 19%, 16%);
+    --divider: hsl(230, 8%, 57%);
     --card-bg: hsl(228, 28%, 20%);
     --card-hover: hsl(228, 28%, 24%);
     --color1: hsl(230, 22%, 74%);
@@ -35,14 +38,17 @@
 }
 @media (prefers-color-scheme: dark) {
     html:not([data-theme]) {
-        --toggle-bg-start: hsl(210, 79%, 56%);
-        --toggle-bg-end: hsl(146, 68%, 55%);
-        --toggle: linear-gradient(225deg, var(--toggle-bg-start) 0%, var(--toggle-bg-end) 98.02%);
-        --bg-color: hsl(230, 17%, 14%);
-        --top-bg-color: hsl(232, 19%, 16%);
-        --card-bg: hsl(228, 28%, 20%);
-        --card-hover: hsl(228, 25%, 28%);
-        --color1: hsl(230, 22%, 74%);
-        --color2: hsl(0, 100%, 100%);
+     // Dark toggle
+    --toggle-bg-start: hsl(210, 79%, 56%);
+    --toggle-bg-end: hsl(146, 68%, 55%);
+    --toggle: linear-gradient(225deg, var(--toggle-bg-start) 0%, var(--toggle-bg-end) 98.02%);
+    // Dark theme
+    --bg-color: hsl(230, 17%, 14%);
+    --top-bg-color: hsl(232, 19%, 16%);
+    --divider: hsl(230, 8%, 57%);
+    --card-bg: hsl(228, 28%, 20%);
+    --card-hover: hsl(228, 28%, 24%);
+    --color1: hsl(230, 22%, 74%);
+    --color2: hsl(0, 100%, 100%);
     }
 }

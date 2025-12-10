@@ -35,7 +35,7 @@
         position: absolute;
         width: 100%;
         top: 0;
-        left: 0;
+        inset-inline-start: 0;
         pointer-events: none;
         transition: background-color 0.3s ease, background-image 0.3s ease; 
     }
@@ -47,14 +47,14 @@
         position: absolute;
         top: rem(3);
         pointer-events: none;
-        transition: left 0.2s ease-in-out, background-color 0.3s ease;
-        left: rem(3);
+        transition: inset-inline-start 0.2s ease-in-out, background-color 0.3s ease;
+        inset-inline-start: rem(3);
     }
    input[type='radio'][id='dark']:checked ~ &__button {
-        left: rem(3);
+        inset-inline-start: rem(3);
     }
     input[type='radio'][id='light']:checked ~ &__button {
-        left: calc(100% - rem(21));
+        inset-inline-start: calc(100% - rem(21));
     }
     &__wrapper:hover &__background {
         opacity: 0.9;

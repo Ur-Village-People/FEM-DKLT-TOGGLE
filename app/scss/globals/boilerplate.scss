@@ -23,7 +23,7 @@ body {
         background-color: var(--top-bg-color); 
         position: absolute;
         top: 0;
-        left: 0;
+        inset-inline-start: 0;
         width: 100%;
         z-index: -1;
         transition: background-color 0.3s ease;
@@ -31,7 +31,7 @@ body {
 }
 .visually-hidden {
     position: absolute;
-    left: rem(-10000);
+    inset-inline-start: rem(-10000);
     top: auto;
     width: rem(1);
     height: rem(1);
@@ -45,8 +45,14 @@ body {
     body::before,
     .card,
     .toggle__background,
-    .toggle__button {
-        transition: none !important;
-        animation: none !important;
+    .toggle__button,
+    .card__icon, 
+    .card__count,
+    .card__label,
+    .card__change--up img, 
+    .card__change--down img 
+    {
+        transition: none;
+        animation: none;
     }
 }

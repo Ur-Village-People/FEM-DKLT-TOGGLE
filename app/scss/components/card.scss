@@ -72,14 +72,15 @@
     transition:0.2s ease-in-out;
    &:hover {
         background: var(--card-hover);
-        img:not(.card__change img) {
+        .card__icon {
             animation: wobble 0.6s ease-in-out;
         }
         .card__change--up img {
-            animation: bounce-up 0.8s ease-out;
+            animation: bounce-up 0.8s ease-in-out;
+            
         }
         .card__change--down img {
-            animation: bounce-down 0.8s ease-out;
+            animation: bounce-down 0.8s ease-in-out;
         }
     }
     &--facebook {
@@ -89,7 +90,7 @@
         border-top: rem(5) solid var(--twitter); 
     }
     &--instagram {
-        padding-top: rem(30);
+        padding-block-start: rem(30);
         &::before {
             content: '';
             height: rem(5);
@@ -98,7 +99,7 @@
             display: block;
             position: absolute;
             top: 0;
-            left: 0;
+            inset-inline-start: 0;
         }
     }
     &--youtube {

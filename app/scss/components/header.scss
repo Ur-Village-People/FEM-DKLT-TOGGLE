@@ -9,6 +9,11 @@
     }
     @include breakpoint-down(small) {
         flex-direction: column;
+        &__divider {
+            background: var(--divider);
+            height: rem(1);
+            margin: rem(24) 0 rem(24);
+        }
     }
     &__title {
         @include breakpoint(medium) {
