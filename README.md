@@ -13,9 +13,6 @@ This is a solution to the [Social media dashboard with theme switcher challenge 
   - [My Process](#my-process)
     - [Built With](#built-with)
     - [What I Learned](#what-i-learned)
-  - [Getting Started](#getting-started)
-    - [Running the Project](#running-the-project)
-    - [For Developers (Modifying Styles)](#for-developers-modifying-styles)
   - [Author](#author)
 
 ---
@@ -60,25 +57,6 @@ This project was a great opportunity to implement advanced UI/UX features and be
     * **Wobble and Scale:** The main social media icons animate with a slight rotation and size increase on hover, giving a high-energy "pop" effect.
     * **Directional Bounce:** The growth/decline arrows animate with a single, subtle vertical bounce (up or down) to visually reinforce the data trend.
 3.  **Precise Selector Control:** The `:not()` pseudo-class was used to ensure the two distinct hover animations (wobble/scale vs. bounce) were applied only to their intended images, preventing visual clutter.
-
----
-
-## Getting Started
-
-The necessary files are already compiled and ready to use in the `dist` folder (`style.css` and `script.js`).
-
-### Running the Project
-
-1.  **Clone the repository:**
-    ```bash
-    git clone [YOUR_REPOSITORY_URL_HERE]
-    ```
-2.  **Open the file:**
-    Simply open the `index.html` file in your web browser.
-
-### For Developers (Modifying Styles)
-
-If you plan to modify the styles, you will need a compiler (like Node-Sass or similar tool) to process the source SCSS files (e.g., `colors.scss`, `card.scss`, etc.) into the final `style.css` file.
 
 ---
 

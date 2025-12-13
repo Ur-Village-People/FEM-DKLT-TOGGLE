@@ -1,8 +1,6 @@
 @use '../util' as *;
 html {
     font-size: 100%;
-    margin: 0;
-    padding: 0;
 }
 * {
     box-sizing: border-box;
@@ -12,7 +10,6 @@ html {
 body {
     font-family: var(--font-inter);
     background: var(--bg-color);
-    margin: 0;
     color: var(--color2);
     position: relative;
     transition: background-color 0.3s ease, color 0.3s ease;
